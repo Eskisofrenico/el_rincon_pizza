@@ -110,10 +110,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-if 'RAILWAY_ENVIRONMENT' in os.environ:
-    DEBUG = False
-    ALLOWED_HOSTS = ['*']
-    
-    # Archivos estáticos
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')

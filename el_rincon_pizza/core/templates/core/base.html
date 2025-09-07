@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}El Rincón de la Pizza{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-red: #c41e3a;
+            --primary-green: #2d5016;
+            --accent-gold: #ffd700;
+            --light-cream: #faf7f0;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light-cream);
+        }
+        
+        h1, h2, h3, .brand-font {
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        .navbar-brand {
+            font-family: 'Fredoka One', cursive;
+            color: var(--primary-red) !important;
+            font-size: 1.8rem;
+        }
+        
+        .btn-pizza {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-pizza:hover {
+            background-color: #a01729;
+            border-color: #a01729;
+            color: white;
+        }
+    </style>
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-pizza-slice me-2"></i>El Rincón de la Pizza
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/nosotros/">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/galeria/">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/preguntas-frecuentes/">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-pizza ms-2" href="#" onclick="alert('¡Función de pedidos próximamente!')">
+                            <i class="fas fa-shopping-cart me-1"></i>Hacer Pedido
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="brand-font text-warning">El Rincón de la Pizza</h5>
+                    <p class="mb-3">La auténtica pizza italiana con el sabor casero que tanto amas.</p>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-warning mb-3">Horarios de Atención</h6>
+                    <p class="mb-1"><strong>Lunes a Jueves:</strong> 11:00 AM - 11:00 PM</p>
+                    <p class="mb-1"><strong>Viernes y Sábado:</strong> 11:00 AM - 12:00 AM</p>
+                    <p class="mb-1"><strong>Domingo:</strong> 12:00 PM - 10:00 PM</p>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-warning mb-3">Contacto</h6>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i>+56 9 1234 5678</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i>info@elrincondelapizza.cl</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 El Rincón de la Pizza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

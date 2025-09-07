@@ -1,0 +1,189 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Preguntas Frecuentes - El Rincón de la Pizza{% endblock %}
+
+{% block content %}
+<!-- Banner Section -->
+<section class="py-5 bg-warning text-dark">
+    <div class="container text-center">
+        <h1 class="brand-font display-4 mb-3">Preguntas Frecuentes</h1>
+        <p class="lead">Encuentra respuestas a las preguntas más comunes sobre nuestro servicio</p>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    
+                    <!-- Pregunta 1 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse1" aria-expanded="true">
+                                <i class="fas fa-clock me-3 text-primary"></i>
+                                ¿Cuáles son sus horarios de atención?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Lunes a Jueves:</strong> 11:00 AM - 11:00 PM</p>
+                                <p><strong>Viernes y Sábado:</strong> 11:00 AM - 12:00 AM</p>
+                                <p><strong>Domingo:</strong> 12:00 PM - 10:00 PM</p>
+                                <p class="mb-0">Nuestro servicio de delivery funciona en los mismos horarios.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pregunta 2 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse2">
+                                <i class="fas fa-motorcycle me-3 text-primary"></i>
+                                ¿Cuánto tiempo demora el delivery?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Nuestro tiempo promedio de entrega es de <strong>25-30 minutos</strong> desde que confirmas tu pedido.</p>
+                                <p>Si tu pizza demora más de 45 minutos, ¡es gratis!</p>
+                                <p class="mb-0">Los tiempos pueden variar durante horas peak (viernes y sábados por la noche).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pregunta 3 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse3">
+                                <i class="fas fa-map-marker-alt me-3 text-primary"></i>
+                                ¿A qué zonas hacen delivery?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Realizamos delivery a las siguientes comunas:</p>
+                                <ul>
+                                    <li>Centro (Gratis en pedidos sobre $12.000)</li>
+                                    <li>Providencia (Gratis en pedidos sobre $15.000)</li>
+                                    <li>Ñuñoa (Gratis en pedidos sobre $15.000)</li>
+                                    <li>Las Condes (Gratis en pedidos sobre $18.000)</li>
+                                    <li>La Reina (Gratis en pedidos sobre $18.000)</li>
+                                </ul>
+                                <p class="mb-0">Para otras zonas, consulta disponibilidad llamando al +56 9 1234 5678</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pregunta 4 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse4">
+                                <i class="fas fa-credit-card me-3 text-primary"></i>
+                                ¿Qué métodos de pago aceptan?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>En el local:</h6>
+                                        <ul>
+                                            <li>Efectivo</li>
+                                            <li>Tarjetas de débito y crédito</li>
+                                            <li>Transferencia bancaria</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Para delivery:</h6>
+                                        <ul>
+                                            <li>Efectivo (con vuelto exacto)</li>
+                                            <li>Tarjetas (con POS móvil)</li>
+                                            <li>Transferencia (enviando comprobante)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pregunta 5 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse5">
+                                <i class="fas fa-exclamation-triangle me-3 text-primary"></i>
+                                ¿Tienen opciones para personas con alergias?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Sí, ofrecemos varias opciones especiales:</p>
+                                <ul>
+                                    <li><strong>Sin gluten:</strong> Masa especial disponible (consultar disponibilidad)</li>
+                                    <li><strong>Sin lactosa:</strong> Queso vegano disponible</li>
+                                    <li><strong>Vegetarianas y veganas:</strong> Amplia variedad de ingredientes</li>
+                                </ul>
+                                <p class="alert alert-warning">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Importante:</strong> Nuestra cocina maneja múltiples ingredientes. Si tienes alergias severas, 
+                                    por favor informa al momento de hacer tu pedido para tomar precauciones especiales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pregunta 6 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse6">
+                                <i class="fas fa-undo me-3 text-primary"></i>
+                                ¿Qué pasa si no estoy satisfecho con mi pedido?
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Tu satisfacción es nuestra prioridad. Si no estás conforme con tu pedido:</p>
+                                <ol>
+                                    <li>Llámanos inmediatamente al +56 9 1234 5678</li>
+                                    <li>Explícanos el problema</li>
+                                    <li>Te ofreceremos una solución inmediata</li>
+                                </ol>
+                                <p class="mb-0">
+                                    <strong>Garantía:</strong> Si hay algún error en tu pedido, lo reemplazamos sin costo. 
+                                    Si la pizza no cumple con tus expectativas, tienes 100% devolución de tu dinero.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Contacto adicional -->
+                <div class="text-center mt-5">
+                    <h4 class="brand-font text-primary mb-3">¿No encontraste lo que buscabas?</h4>
+                    <p>Contáctanos directamente y con gusto te ayudaremos</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="tel:+56912345678" class="btn btn-outline-primary">
+                            <i class="fas fa-phone me-2"></i>Llamar
+                        </a>
+                        <a href="https://wa.me/56912345678" class="btn btn-success" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                        </a>
+                        <a href="mailto:info@elrincondelapizza.cl" class="btn btn-outline-secondary">
+                            <i class="fas fa-envelope me-2"></i>Email
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

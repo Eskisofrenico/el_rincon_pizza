@@ -1,0 +1,91 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Inicio - El Rincón de la Pizza{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section position-relative">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-12 position-relative">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                     class="img-fluid w-100" style="height: 70vh; object-fit: cover;" alt="Pizza deliciosa">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" 
+                     style="background: rgba(0,0,0,0.4);">
+                    <div class="container text-white text-center">
+                        <h1 class="display-3 brand-font mb-4">Bienvenidos a El Rincón de la Pizza</h1>
+                        <p class="lead mb-4">La auténtica pizza italiana con ingredientes frescos y masa artesanal</p>
+                        <a href="#promociones" class="btn btn-pizza btn-lg">Ver Promociones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Promociones del Día - BLOQUE DINÁMICO 1 -->
+<section id="promociones" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center brand-font mb-5">Promociones del Día</h2>
+        <div id="promocionesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 class="img-fluid rounded" alt="Pizza 2x1">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="brand-font text-primary">2x1 en Pizzas Familiares</h3>
+                            <p class="lead">Todos los martes y miércoles. Válido solo para pizzas familiares clásicas.</p>
+                            <h4 class="text-success">¡Ahorra hasta $12.000!</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 class="img-fluid rounded" alt="Combo familiar">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="brand-font text-primary">Combo Familiar</h3>
+                            <p class="lead">2 Pizzas familiares + bebida de 2L + palitos de ajo</p>
+                            <h4 class="text-success">Solo $25.990</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Características destacadas -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <i class="fas fa-clock fs-1 text-primary mb-3"></i>
+                <h4 class="brand-font">Entrega Rápida</h4>
+                <p>Delivery en 30 minutos o tu pizza es gratis</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="fas fa-leaf fs-1 text-success mb-3"></i>
+                <h4 class="brand-font">Ingredientes Frescos</h4>
+                <p>Seleccionamos los mejores ingredientes cada día</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="fas fa-heart fs-1 text-danger mb-3"></i>
+                <h4 class="brand-font">Receta Familiar</h4>
+                <p>Masa artesanal con receta italiana de la nonna</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

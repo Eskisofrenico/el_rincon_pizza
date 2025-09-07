@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'core:home' %}">
+            <i class="fas fa-pizza-slice me-2"></i>El Rincón de la Pizza
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:home' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:about' %}">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:gallery' %}">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:faq' %}">Preguntas Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-pizza ms-2" href="#" onclick="alert('¡Función de pedidos próximamente!')">
+                        <i class="fas fa-shopping-cart me-1"></i>Hacer Pedido
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

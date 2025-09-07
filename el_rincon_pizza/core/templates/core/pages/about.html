@@ -1,0 +1,71 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Quiénes Somos - El Rincón de la Pizza{% endblock %}
+
+{% block content %}
+<!-- Banner Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h1 class="brand-font display-4 mb-3">Nuestra Historia</h1>
+        <p class="lead">Más de 25 años llevando la auténtica pizza italiana a tu mesa</p>
+    </div>
+</section>
+
+<!-- Historia -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     class="img-fluid rounded shadow" alt="Cocinero haciendo pizza">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="brand-font text-primary mb-4">Todo Comenzó en 1995</h2>
+                <p class="mb-3">La familia Rossi llegó desde Nápoles con un sueño: compartir la auténtica pizza italiana con nuestra comunidad. Don Giuseppe y Mama Rosa abrieron las puertas de El Rincón de la Pizza con una receta secreta transmitida por generaciones.</p>
+                <p class="mb-3">Desde entonces, hemos mantenido la tradición de preparar nuestra masa madre cada día, seleccionar los ingredientes más frescos y hornear cada pizza con el amor de una familia italiana.</p>
+                <p><strong>Hoy, somos una familia de más de 20 personas dedicadas a hacer la mejor pizza de la ciudad.</strong></p>
+            </div>
+        </div>
+        
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     class="img-fluid rounded shadow" alt="Horno de pizza">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h2 class="brand-font text-primary mb-4">Nuestra Filosofía</h2>
+                <p class="mb-3">Creemos que una buena pizza no solo alimenta el cuerpo, sino también el alma. Por eso, cada pizza que sale de nuestro horno lleva ingredientes seleccionados con cuidado y mucho amor.</p>
+                <p class="mb-3">Nuestro horno de piedra, importado directamente desde Italia, alcanza los 400°C necesarios para lograr esa corteza perfecta: crujiente por fuera y suave por dentro.</p>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-award fs-3 text-warning me-3"></i>
+                    <span><strong>Reconocidos como "Mejor Pizza Tradicional" 3 años consecutivos</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Valores -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="brand-font text-center text-primary mb-5">Nuestros Valores</h2>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-handshake fs-1 text-primary mb-3"></i>
+                <h4 class="brand-font">Tradición Familiar</h4>
+                <p>Mantenemos vivas las recetas y técnicas tradicionales italianas</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-seedling fs-1 text-success mb-3"></i>
+                <h4 class="brand-font">Calidad Superior</h4>
+                <p>Solo usamos ingredientes frescos y de la más alta calidad</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-users fs-1 text-warning mb-3"></i>
+                <h4 class="brand-font">Servicio al Cliente</h4>
+                <p>Cada cliente es parte de nuestra gran familia italiana</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

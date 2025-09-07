@@ -1,0 +1,1 @@
+web: gunicorn el_rincon_pizza.wsgi --log-file -

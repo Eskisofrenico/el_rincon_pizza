@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - El Rincón de la Pizza</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-red: #c41e3a;
+            --primary-green: #2d5016;
+            --accent-gold: #ffd700;
+            --light-cream: #faf7f0;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light-cream);
+        }
+        
+        h1, h2, h3, .brand-font {
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        .navbar-brand {
+            font-family: 'Fredoka One', cursive;
+            color: var(--primary-red) !important;
+            font-size: 1.8rem;
+        }
+        
+        .btn-pizza {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-pizza:hover {
+            background-color: #a01729;
+            border-color: #a01729;
+            color: white;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-pizza-slice me-2"></i>El Rincón de la Pizza
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-pizza ms-2" href="#" onclick="alert('¡Función de pedidos próximamente!')">
+                            <i class="fas fa-shopping-cart me-1"></i>Hacer Pedido
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        
+<!-- Banner Section -->
+<section class="py-5 bg-dark text-white">
+    <div class="container text-center">
+        <h1 class="brand-font display-4 mb-3">Galería de Imágenes</h1>
+        <p class="lead">Descubre nuestras deliciosas pizzas y el ambiente acogedor de nuestro restaurante</p>
+    </div>
+</section>
+
+<!-- Filtros - BLOQUE DINÁMICO 2 -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="text-center">
+            <button class="btn btn-outline-primary me-2 mb-2 filter-btn active" data-filter="all">Todas</button>
+            <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="pizzas">Pizzas</button>
+            <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="ambiente">Ambiente</button>
+            <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="ingredientes">Ingredientes</button>
+            <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="proceso">Proceso</button>
+        </div>
+    </div>
+</section>
+
+<!-- Galería de Imágenes -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4" id="gallery">
+            <!-- Pizzas -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="pizzas">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Pizza Margarita">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Pizza Margarita</h5>
+                        <p class="card-text">La clásica pizza italiana con tomate, mozzarella fresca y albahaca</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="pizzas">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Pizza Pepperoni">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Pizza Pepperoni</h5>
+                        <p class="card-text">Nuestra pizza más popular con pepperoni premium y extra queso</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="pizzas">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Pizza Cuatro Quesos">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Pizza Cuatro Quesos</h5>
+                        <p class="card-text">Una deliciosa combinación de cuatro sabores en una sola pizza</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ambiente -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="ambiente">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Interior del restaurante">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Nuestro Ambiente</h5>
+                        <p class="card-text">Un espacio acogedor con decoración italiana auténtica</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="ambiente">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Mesa familiar">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Espacio Familiar</h5>
+                        <p class="card-text">Perfecto para disfrutar en familia o con amigos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ingredientes -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="ingredientes">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Ingredientes frescos">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Ingredientes Frescos</h5>
+                        <p class="card-text">Seleccionamos los mejores ingredientes cada día</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="ingredientes">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4IKbxrCV_PeIAFgfp00EPhgkQMLsWqazSAQ&s"
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Mozzarella fresca">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Mozzarella Artesanal</h5>
+                        <p class="card-text">Preparada diariamente siguiendo técnicas tradicionales</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proceso -->
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="proceso">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Horno de pizza">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Horno de Piedra</h5>
+                        <p class="card-text">Nuestro horno importado de Italia alcanza 400°C</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 gallery-item" data-category="proceso">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://pbs.twimg.com/media/CtnEl2ZXgAA_1mO.jpg" 
+                         class="card-img-top" style="height: 250px; object-fit: cover;" alt="Preparación de masa">
+                    <div class="card-body">
+                        <h5 class="card-title brand-font">Masa Artesanal</h5>
+                        <p class="card-text">Preparada a mano con técnicas tradicionales italianas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="brand-font text-warning">El Rincón de la Pizza</h5>
+                    <p class="mb-3">La auténtica pizza italiana con el sabor casero que tanto amas.</p>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-warning mb-3">Horarios de Atención</h6>
+                    <p class="mb-1"><strong>Lunes a Jueves:</strong> 11:00 AM - 11:00 PM</p>
+                    <p class="mb-1"><strong>Viernes y Sábado:</strong> 11:00 AM - 12:00 AM</p>
+                    <p class="mb-1"><strong>Domingo:</strong> 12:00 PM - 10:00 PM</p>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-warning mb-3">Contacto</h6>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i>+56 9 1234 5678</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i>info@elrincondelapizza.cl</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 El Rincón de la Pizza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remover clase active de todos los botones
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Agregar clase active al botón clickeado
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            galleryItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+
+</body>
+</html>
